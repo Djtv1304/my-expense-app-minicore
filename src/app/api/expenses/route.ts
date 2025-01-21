@@ -12,6 +12,8 @@ export async function GET(request: NextRequest) {
 
   try {
     const departmentExpenses = await getDepartmentExpensesByDateRange(startDate, endDate);
+    console.log('Department expenses', departmentExpenses);
+    console.log('Department expenses xd', NextResponse.json(departmentExpenses));
     return NextResponse.json(departmentExpenses);
   } catch (error) {
     return NextResponse.json({ message: "Internal server error.", error }, { status: 500 });

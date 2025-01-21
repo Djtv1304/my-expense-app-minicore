@@ -1,10 +1,16 @@
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, query, where, getDocs, Timestamp  } from "firebase/firestore";
 import { db } from "../services/firebase";
 import { DepartmentExpense } from "../models/departmentExpense";
 
 export const getDepartmentExpensesByDateRange = async (startDate: string, endDate: string): Promise<DepartmentExpense[]> => {
+  const startDateTimestamp = Timestamp.fromDate(new Date(startDate));
+  const endDateTimestamp = Timestamp.fromDate(new Date(endDate));
   const expensesRef = collection(db, "expenses");
-  const q = query(expensesRef, where("date", ">=", startDate), where("date", "<=", endDate));
+  const q = query(
+    expensesRef,
+    where("date", ">=", startDateTimestamp),
+    where("date", "<=", endDateTimestamp)
+  );
   const querySnapshot = await getDocs(q);
 
   const departmentTotals: Record<string, number> = {};

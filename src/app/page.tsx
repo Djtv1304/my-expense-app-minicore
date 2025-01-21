@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { DateRangeSelector } from '../components/DateRangeSelector';
 import { ExpensesTable } from '../components/ExpensesTable';
 import { DepartmentExpense } from '../models/departmentExpense';
-import { fetchExpenses, calculateDepartmentExpenses } from '../services/expenses';
+import { fetchExpenses } from '../services/expenses';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { format } from 'date-fns';
 
@@ -18,8 +18,8 @@ export default function Dashboard() {
       const formattedStartDate = format(startDate, 'yyyy-MM-dd');
       const formattedEndDate = format(endDate, 'yyyy-MM-dd');
       const expensesData = await fetchExpenses(formattedStartDate, formattedEndDate);
-      const departmentExpenses = calculateDepartmentExpenses(expensesData.expenses, expensesData.departments);
-      setExpenses(departmentExpenses);
+      //const departmentExpenses = calculateDepartmentExpenses(expensesData.expenses, expensesData.departments);
+      setExpenses(expensesData);
     } catch (error) {
       console.error('Error fetching expenses:', error);
     } finally {
