@@ -68,7 +68,7 @@ export const ExpensesTable = ({ expenses, isLoading }: ExpensesTableProps) => {
 
   if (expenses.length === 0) {
     return (
-      <div className="text-center py-8 text-muted-foreground">
+      <div className="text-center text-black py-8 text-muted-foreground">
         No se encontraron resultados
       </div>
     );
@@ -83,7 +83,7 @@ export const ExpensesTable = ({ expenses, isLoading }: ExpensesTableProps) => {
               <TableHead>
                 <Button
                   onClick={() => toggleSort('departmentName')}
-                  className="font-medium"
+                  className="font-medium text-black"
                 >
                   Departamento
                   <ArrowUpDown className="ml-2 h-4 w-4" />
@@ -92,7 +92,7 @@ export const ExpensesTable = ({ expenses, isLoading }: ExpensesTableProps) => {
               <TableHead>
                 <Button
                   onClick={() => toggleSort('totalAmount')}
-                  className="font-medium"
+                  className="font-medium text-black"
                 >
                   Total Gastos
                   <ArrowUpDown className="ml-2 h-4 w-4" />
@@ -103,11 +103,11 @@ export const ExpensesTable = ({ expenses, isLoading }: ExpensesTableProps) => {
           <TableBody>
             {paginatedExpenses.map((expense) => (
               <TableRow key={expense.departmentId}>
-                <TableCell>{expense.departmentName}</TableCell>
-                <TableCell>
+                <TableCell className='text-black'>{expense.departmentName}</TableCell>
+                <TableCell className='text-black'>
                   {new Intl.NumberFormat('es-ES', {
                     style: 'currency',
-                    currency: 'EUR',
+                    currency: 'USD',
                   }).format(expense.totalAmount)}
                 </TableCell>
               </TableRow>

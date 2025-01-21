@@ -41,7 +41,7 @@ export const DateRangeSelector = ({ onSearch, className }: DateRangeSelectorProp
     <div className={cn('space-y-4', className)}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label htmlFor="startDate" className="text-sm font-medium">
+          <Label htmlFor="startDate" className="text-sm font-medium text-black">
             Desde
           </Label>
           <Input
@@ -51,11 +51,11 @@ export const DateRangeSelector = ({ onSearch, className }: DateRangeSelectorProp
             value={format(dateRange.startDate, 'yyyy-MM-dd')}
             onChange={(e) => handleDateChange(e.target.value, true)}
             max={format(new Date(), 'yyyy-MM-dd')}
-            className="w-full"
+            className="w-full bg-white text-black"
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="endDate" className="text-sm font-medium">
+          <Label htmlFor="endDate" className="text-sm font-medium text-black">
             Hasta
           </Label>
           <Input
@@ -65,7 +65,7 @@ export const DateRangeSelector = ({ onSearch, className }: DateRangeSelectorProp
             value={format(dateRange.endDate, 'yyyy-MM-dd')}
             onChange={(e) => handleDateChange(e.target.value, false)}
             max={format(new Date(), 'yyyy-MM-dd')}
-            className="w-full"
+            className="w-full bg-white text-black"
           />
         </div>
       </div>
@@ -79,7 +79,7 @@ export const DateRangeSelector = ({ onSearch, className }: DateRangeSelectorProp
       <Button
         onClick={handleSearch}
         disabled={isLoading || !!error}
-        className="w-full md:w-auto"
+        className="w-full md:w-auto bg-black hover:bg-black/80"
       >
         {isLoading ? (
           <>
