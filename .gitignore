@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+/src/app/services/firebase.ts
 
 # next.js
 /.next/
