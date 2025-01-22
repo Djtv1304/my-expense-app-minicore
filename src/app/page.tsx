@@ -48,7 +48,7 @@ export default function Dashboard() {
               <h2 className="text-2xl text-black font-semibold mb-4">Gráfico de Gastos</h2>
               {expenses.length > 0 ? (
                 <ResponsiveContainer width="100%" height={400}>
-                  <BarChart data={expenses}>
+                    <BarChart data={expenses}>
                     <XAxis
                       dataKey="departmentName"
                       tick={{ fontSize: 12 }}
@@ -58,13 +58,13 @@ export default function Dashboard() {
                       height={80}
                     />
                     <YAxis />
-                    <Tooltip />
+                    <Tooltip contentStyle={{ backgroundColor: '#FFF' , color: '#000'}} />
                     <Bar
                       dataKey="totalAmount"
                       fill="hsl(var(--primary))"
                       name="Total Gastos"
                     />
-                  </BarChart>
+                    </BarChart>
                 </ResponsiveContainer>
               ) : (
                 <div className="flex items-center justify-center h-[400px] text-muted-foreground">
