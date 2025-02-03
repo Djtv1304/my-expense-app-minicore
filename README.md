@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# my-expense-app-minicore
 
-## Getting Started
+## Link del Deploy:
+- [Deploy en Vercel](https://my-expense-app-minicore.vercel.app/)
+- [Link del video de explicación](https://www.loom.com/share/4598db6ee5fa4a6d88b4d868a91514eb?sid=ce6d2654-038e-44cf-b604-d91220e03402)
 
-First, run the development server:
+## Descripción
+my-expense-app-minicore es un proyecto desarrollado con Next.js para gestionar y rastrear tus gastos personales. La aplicación proporciona una interfaz amigable y fácil de usar para agregar, editar y visualizar tus gastos.
 
+## Tabla de Contenidos
+- [Descripción](#descripción)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Características](#características)
+- [Tecnologías](#tecnologías)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
+
+## Instalación
+Para instalar y ejecutar my-expense-app-minicore en tu máquina local, sigue estos pasos:
+
+1. Clona el repositorio:
+```bash
+git clone https://github.com/Djtv1304/my-expense-app-minicore.git
+```
+2. Navega al directorio del proyecto:
+```bash
+cd my-expense-app-minicore
+```
+3. Instala las dependencias necesarias:
+```bash
+npm install
+```
+4. Inicia la aplicación en modo desarrollo:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Uso
+Una vez que la aplicación esté en ejecución, puedes acceder a my-expense-app-minicore en `http://localhost:3000`. Puedes comenzar a editar la página modificando `app/page.tsx`. La página se actualiza automáticamente a medida que editas el archivo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Características
+- Registro de gastos personales
+- Edición y eliminación de gastos
+- Visualización de gastos en una interfaz intuitiva
+- Optimización y carga automática de fuentes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tecnologías
+- Next.js
+- TypeScript
+- Tailwind CSS
 
-## Learn More
+## Contribución
+Si deseas contribuir a my-expense-app-minicore, por favor sigue estos pasos:
 
-To learn more about Next.js, take a look at the following resources:
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-caracteristica`).
+3. Realiza los cambios necesarios y haz commit (`git commit -am 'Añadir nueva característica'`).
+4. Empuja tus cambios a la rama (`git push origin feature/nueva-caracteristica`).
+5. Crea un Pull Request.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Licencia
+Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
