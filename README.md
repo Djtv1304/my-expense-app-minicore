@@ -5,7 +5,7 @@
 - [Link del video de explicación](https://www.loom.com/share/4598db6ee5fa4a6d88b4d868a91514eb?sid=ce6d2654-038e-44cf-b604-d91220e03402)
 
 ## Descripción
-my-expense-app-minicore es un proyecto desarrollado con Next.js para gestionar y rastrear tus gastos personales. La aplicación proporciona una interfaz amigable y fácil de usar para agregar, editar y visualizar tus gastos.
+my-expense-app-minicore es un proyecto desarrollado con Next.js para gestionar y rastrear tus gastos empresariales. La aplicación proporciona una interfaz amigable y fácil de usar para agregar, editar y visualizar tus gastos.
 
 ## Tabla de Contenidos
 - [Descripción](#descripción)
@@ -40,10 +40,9 @@ npm run dev
 Una vez que la aplicación esté en ejecución, puedes acceder a my-expense-app-minicore en `http://localhost:3000`. Puedes comenzar a editar la página modificando `app/page.tsx`. La página se actualiza automáticamente a medida que editas el archivo.
 
 ## Características
-- Registro de gastos personales
-- Edición y eliminación de gastos
 - Visualización de gastos en una interfaz intuitiva
 - Optimización y carga automática de fuentes
+- Filtrado por fechas
 
 ## Tecnologías
 - Next.js
